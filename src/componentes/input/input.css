@@ -22,7 +22,7 @@
 
 @media screen and (max-width: 767px) {
   .flex-container {
-    gap: 1px;
+    gap: 5px;
   }
   #search-input {
     width: 200px;
