@@ -1,0 +1,30 @@
+#search-input {
+  width: 550px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  outline: none;
+}
+
+#search-input:focus {
+  border-color: #bd081c; /* Color del borde al enfocar el input */
+  box-shadow: 0 0 5px #bd081c; /* Sombra al enfocar el input */
+}
+
+@media screen and (max-width: 860px) {
+  #search-input {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flex-container {
+    gap: 1px;
+  }
+  #search-input {
+    width: 200px;
+  }
+}

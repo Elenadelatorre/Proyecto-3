@@ -1,0 +1,9 @@
+img {
+  max-width: 300px;
+  margin: var(--rtc-margins-s);
+  flex-basis: 350px;
+  flex-grow: 1;
+  border-radius: var(--border-radius);
+  object-position: center;
+  object-fit: cover;
+}
