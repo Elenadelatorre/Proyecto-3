@@ -57,6 +57,7 @@ searchButton.addEventListener('click', () => {
 
 const imagesContainer = document.querySelector('#app');
 document.querySelector('.active').addEventListener('click', () => {
+  document.getElementById('search-input').value = '';
   imagesContainer.innerHTML = '';
   randomImagesContainer = document.createElement('div');
   randomImagesContainer.id = 'random-images-container';
@@ -66,6 +67,7 @@ document.querySelector('.active').addEventListener('click', () => {
 });
 
 document.querySelector('.logo').addEventListener('click', () => {
+  document.getElementById('search-input').value = '';
   imagesContainer.innerHTML = '';
   randomImagesContainer = document.createElement('div');
   randomImagesContainer.id = 'random-images-container';
