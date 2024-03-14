@@ -7,3 +7,10 @@ img {
   object-position: center;
   object-fit: cover;
 }
+
+p {
+  color: black;
+  font-style: italic;
+  margin-top: 20px;
+  padding: 20px;
+}

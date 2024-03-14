@@ -11,9 +11,9 @@ export function displayImages(images) {
     imageResults.appendChild(img);
   });
 }
-export function imagesCollection() {
+
+export function imagesCollection(query) {
   const accessKey = 'ypaiUUedoFphsaNYHKHQnB3E3Q7GpnxdcobUOhF4vck';
-  const query = document.getElementById('search-input').value;
   const imagesUrl = `https://api.unsplash.com/search/photos?page=1&query=${query}&client_id=${accessKey}`;
 
   fetch(imagesUrl)
@@ -24,7 +24,16 @@ export function imagesCollection() {
       return response.json();
     })
     .then((data) => {
-      displayImages(data.results);
+      const imagesContainer = document.querySelector('#app');
+
+      if (data.results.length === 0) {
+        // No se encontraron resultados, mostrar mensaje
+        imagesContainer.textContent =
+          'No se encontraron resultados para la búsqueda.';
+      } else {
+        // Mostrar las imágenes
+        displayImages(data.results);
+      }
     })
     .catch((error) => {
       console.error('Hay un problema con la petición Fetch: ', error);
